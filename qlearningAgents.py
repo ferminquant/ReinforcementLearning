@@ -54,8 +54,8 @@ class QLearningAgent(ReinforcementAgent):
         self.episodeRewards = 0.0
 
         if self.epsilon is not None:
-          new_epsilon = self.epsilon #- 0.005
-          self.epsilon = max(0.0, new_epsilon)
+          new_epsilon = self.epsilon - 0.005
+          self.epsilon = max(0.05, new_epsilon)
           #print self.epsilon
 
     def getQValue(self, state, action):
